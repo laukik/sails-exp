@@ -1,0 +1,49 @@
+/*.form-control {
+  padding-right: 30px!important;
+}
+
+.form-control + .glyphicon {
+  position: absolute!important;
+  right: 0!important;
+  padding: 22px 25px!important;
+}
+
+.form-control + .icon {
+  position: absolute!important;
+  right: 0!important;
+  padding: 15px 20px!important;
+}
+*/
+.extra {
+	border-radius:5px;
+}
+
+.bit-user {
+	position: absolute;
+	right: 0;
+	padding: 22px 25px;
+	margin-bottom: 15px!important;
+}
+
+.bit-email {
+	position: absolute;
+	right: 0;
+	padding: 74px 25px;
+	margin-bottom: 15px!important;
+}
+
+.bit-password {
+	position: absolute;
+	right: 0;
+	padding: 126px 25px;
+	margin-bottom: 15px!important;
+}
+
+
+.bit-password-confirm {
+	position: absolute;
+	right: 0;
+	padding: 178px 25px;
+	margin-bottom: 15px!important;
+}
+

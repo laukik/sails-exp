@@ -1,0 +1,22 @@
+body {
+	/*background-image:url("../../images/px.png");*/
+	background-color:#222!important;
+}
+
+.alpha {
+	background:rgba(0, 0, 0, 0.1)!important;
+}
+
+.navbar-color {
+	background-color:#2e2e2e!important;
+	color:#e6e6e6!important;
+}
+
+.space {
+	margin-top: 200px;
+}
+
+.space input {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

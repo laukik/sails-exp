@@ -1,0 +1,75 @@
+<%- partial('partials/header')%>
+<div class="container">
+	<div class="col-lg-4 space" >
+	</div>	
+	<div class="col-lg-4 space" >
+		
+		<form class="form" action="/signup" method="post">
+			<div>
+				<input type="text" class="form-control extra" id="user" placeholder="username" name="username" required>
+				<% if( user_err == true){%>
+				<script type="text/javascript">
+					$('#user').tooltip({
+						title:"username Already Registered",
+						container:'body',
+						placement:'auto left'	
+					});
+					$('#user').tooltip('show');
+				</script>
+				<span class="glyphicon bit-user glyphicon-remove-sign has-error"></span>	
+				<%}else{%>
+				<span class="glyphicon bit-user glyphicon-user"></span>	
+				<%}%>
+			</div>
+			<div>
+				<input type="text" class="form-control extra" id="email" placeholder="email address" name="email" required>
+				<% if( email_err == true){%>
+				<script type="text/javascript">
+					$('#email').tooltip({
+						title:"email address Already Registered",
+						container:'body',
+						placement:'auto left'	
+					});
+					$('#email').tooltip('show');
+				</script>
+				<span class="glyphicon bit-email glyphicon-remove-sign has-error"></span>
+				<%}else{%>
+				<span class="glyphicon bit-email glyphicon-envelope"></span>	
+				<%}%>
+			</div>
+			<div>
+				<input type="password" class="form-control extra" id="password" placeholder="password min 6 char long" name="password" required>
+				<span class="glyphicon bit-password glyphicon-lock"></span>	
+			</div>
+			<div>
+				<input type="password" class="form-control extra" id="confirm" placeholder="confirm password" name="password" required>
+				<span class="glyphicon bit-password-confirm glyphicon-lock"></span>	
+			</div>
+			<input type="hidden" name="_csrf" value="<%= _csrf %>"/>
+			
+			<button type='submit' class="btn btn-default form-control">
+				Signup   &nbsp <span class="fui-user"></span>
+			</button>
+		</form>
+
+	</div>
+	
+</div>
+<%- partial('partials/footer')%>
+
+
+<script type="text/javascript">
+	$( function(){
+		$('#confirm').blur(function(){
+			if( $('#confirm').val() != $('#password').val() ){
+				$('#confirm').val('');
+				$('#password').tooltip({
+					title:"password mismatch",
+					container:'body',
+					placement:'auto left'	
+				});
+				$('#password').tooltip('show');	
+			}
+		});
+	});
+</script>
